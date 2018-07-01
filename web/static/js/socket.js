@@ -32,13 +32,13 @@ function renderComments(comments) {
 
 }
 
-function renderComment(comment) {
-   const renderedComment = commentTemplate(comment);
+function renderComment(event) {
+   const renderedComment = commentTemplate(event.comment);
    document.querySelector('.collection').innerHTML += renderedComment;
 }
 
 function commentTemplate(comment) {
-  
+
     return `
       <li class="collection-item">
         ${comment.content}
