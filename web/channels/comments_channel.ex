@@ -1,7 +1,8 @@
 defmodule Discuss.CommentsChannel do
   use Discuss.Web, :channel
-  alias Discuss.Topic
-  alias Discuss.Comment
+  # alias Discuss.Topic
+  # alias Discuss.Comment
+  alias Discuss.{ Topic, Comment}
 
   def join("comments:" <> topic_id,_params,socket) do
     topic_id = String.to_integer(topic_id)
